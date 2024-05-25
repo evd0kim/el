@@ -1,0 +1,73 @@
+@import '~/styles';
+
+.NostrRoot {
+  display: block;
+}
+
+.NostrTitle {
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: #{$width-xs}) {
+    padding-bottom: 1rem;
+  }
+}
+
+.NostrIframe {
+  max-width: 100%;
+
+  background-color: black;
+  border: none;
+  border-radius: 1rem;
+
+  hight: 100vw;
+}
+
+.Test {
+  width: 100%;
+
+  //display: flex;
+  //max-width: 19vw;
+  //
+  &:first-child {
+    min-width: 100%;
+    max-width: none;
+    border: 5px solid red;
+  }
+
+  div {
+    color: white;
+    background: transparent;
+
+    div {
+      div {
+        a {
+          display: flex;
+        }
+      }
+    }
+
+    a {
+      color: white;
+    }
+
+    div:nth-child(1) {
+      div:nth-child(3) {
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+
+  h2 {
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+
+  svg {
+    color: yellow;
+  }
+}

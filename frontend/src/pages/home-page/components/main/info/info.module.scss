@@ -1,0 +1,36 @@
+@import '../../../../../styles/styles';
+
+.InfoTitle {
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: #{$width-xs}) {
+    padding-bottom: 1rem;
+  }
+}
+
+.InfoItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  min-width: 100%;
+  padding-bottom: 0.625rem;
+
+  &:last-of-type {
+    padding-bottom: 1.125rem;
+  }
+}
+
+.InfoButton.InfoButton {
+  gap: 0.5625rem;
+  align-self: start;
+}
+
+.InfoButtonIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.InfoSkeleton {
+  width: 100%;
+}

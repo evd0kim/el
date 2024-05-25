@@ -1,0 +1,39 @@
+@import '../../../../../../styles/styles';
+
+.DisplayWalletInfoRoot.DisplayWalletInfoRoot {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+
+  width: fit-content;
+  padding: 0.75rem 1rem;
+
+  background: rgb(26 33 33 / 50%);
+  border-radius: 16px;
+}
+
+//.DisplayWalletInfoIcon {
+//  width: 26px;
+//  margin: 0 3px;
+//}
+
+.DisplayWalletInfoIcon {
+  width: 32px;
+  margin: 0 3px;
+  color: var(--color-light);
+}
+
+.DisplayWalletInfoSucceededIcon {
+  width: 28px;
+  margin: 0 2px;
+}
+
+.DisplayWalletInfoText {
+  color: var(--color-light);
+  white-space: nowrap;
+}
+
+.DisplayWalletInfoTextConnect {
+  color: var(--color-accent-lime)
+}
