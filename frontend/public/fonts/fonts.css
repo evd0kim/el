@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Jost;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./Jost-500-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Jost;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./Jost-600-Semi.ttf') format('truetype');
+}

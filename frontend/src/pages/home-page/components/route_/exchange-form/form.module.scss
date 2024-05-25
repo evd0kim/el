@@ -1,0 +1,30 @@
+@import '~/styles';
+
+.ExchangeFormRoot {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: start;
+}
+
+.FormError {
+  align-self: end;
+
+  box-sizing: border-box;
+  min-height: 1.75rem;
+  margin: 0 0 0 auto;
+
+  text-align: right;
+}
+
+.InputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ButtonsWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

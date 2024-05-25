@@ -1,0 +1,13 @@
+.TimerRoot {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.TimerGray {
+  color: var(--color-light)
+}

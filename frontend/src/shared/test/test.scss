@@ -1,0 +1,33 @@
+#qr-shaded-region {
+  border: 20px solid pink !important;
+  border-radius: 50px !important;
+
+  div {
+    background-color: transparent !important;
+  }
+}
+
+#qrCodeContainer {
+  position: relative !important;
+
+  overflow: hidden !important;
+
+  width: 300px !important;
+  height: 300px !important;
+
+  border: 1px solid blue !important;
+  border-radius: 50px !important;
+
+  video {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    border: 10px solid red !important;
+  }
+}
