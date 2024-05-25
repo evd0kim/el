@@ -18,7 +18,7 @@ module.exports = buildModule("ELTokenModule", (m) => {
   const { cToken } = m.useModule(VBTCModule);
   const owner = m.getParameter("initialOwner", INITIAL_OWNER);
 
-  const eltoken = m.contract("ELToken", [cToken, owner], {});
+  const eltoken = m.contract("ELToken", [cToken, owner, 8], {});
 
   return { eltoken };
 });

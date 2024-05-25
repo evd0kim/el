@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   const collateralTokenAddress = '0x52f74a8f9BdD29F77A5EFD7f6cb44DCF6906A4B6'; // D8 - WBTC
-  const elTokenAddress = '0x5cBE5A8416df3A6f4dA3421bEe2d5A1dcC3f3C4A';
+  const elTokenAddress = '0x0D6202a87B4e82623b07DC81cBb6B9C8adD09B8D';
   const ownerAddress = '0x687bE257D3590697Da95a264154c71062C701936';
 
   const CollateralToken = await hre.ethers.getContractAt("IERC20", collateralTokenAddress);

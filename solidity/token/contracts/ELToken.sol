@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.24;
 
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -10,6 +11,7 @@ contract ELToken is ERC20, Ownable {
     using SafeERC20 for IERC20;
 
     IERC20 public collateralToken; // ERC20 token used as collateral
+    uint8 collateralDecimals; // shortcut
     //uint256 public reserveRate; // collateral asset multiplier
 
     struct CollateralPosition {
@@ -36,10 +38,11 @@ contract ELToken is ERC20, Ownable {
         _;
     }
 
-    constructor(address _collateralTokenAddress, address initialOwner) ERC20("ELToken", "EBTC") Ownable(initialOwner) {
+    constructor(address _collateralTokenAddress, uint8 _collateralDecimals, address initialOwner) ERC20("ELToken", "EBTC") Ownable(initialOwner) {
         require(_collateralTokenAddress != address(0), "Invalid token address");
 
         collateralToken = IERC20(_collateralTokenAddress);
+        collateralDecimals = _collateralDecimals;
         //reserveRate = _reserveRate;
     }
 
@@ -47,8 +50,21 @@ contract ELToken is ERC20, Ownable {
         require(collateralTokenAmount > 0, "Amount must be greater than zero");
         collateralToken.safeTransferFrom(msg.sender, address(this), collateralTokenAmount);
 
+        uint256 decimalsDifference;
+        uint256 mintAmount;
+
+        if (decimals() > collateralDecimals) {
+            decimalsDifference = 10 ** (decimals() - collateralDecimals);
+            mintAmount = collateralTokenAmount * decimalsDifference;
+        } else if (decimals() < collateralDecimals) {
+            decimalsDifference = 10 ** (collateralDecimals - decimals());
+            mintAmount = collateralTokenAmount / decimalsDifference;
+        } else {
+            mintAmount = collateralTokenAmount;
+        }
+
         // uint256 tokensToMint = collateralTokenAmount  * reserveRate;
-        _mint(msg.sender, collateralTokenAmount);
+        _mint(msg.sender, mintAmount);
 
         positions[msg.sender] = CollateralPosition(
             lockUntil,
