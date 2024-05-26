@@ -1,0 +1,19 @@
+@import '~/styles';
+
+.PartnersRoot.PartnersRoot {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  @media screen and (max-width: #{$width-m}) {
+    flex-direction: column;
+  }
+}
+
+.PartnersTitle {
+  color: var(--color-light-gray);
+}

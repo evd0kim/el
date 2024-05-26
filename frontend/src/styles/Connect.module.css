@@ -1,0 +1,80 @@
+.connect a,
+.connect span {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.connect span {
+  vertical-align: top;
+}
+
+.connect {
+  margin-bottom: 1rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 0.5rem;
+
+  font-weight: 600;
+}
+
+.item:first-child {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.link {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.dashboard span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (width <= 576px) {
+  .connect a,
+  .connect span {
+    font-size: 1rem;
+  }
+
+  .connect > div {
+    display: inline-block;
+  }
+
+  .connect {
+    margin-bottom: -0.5rem;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dashboard span {
+    font-size: 1rem;
+  }
+
+  .dashboard svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+

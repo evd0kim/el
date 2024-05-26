@@ -1,0 +1,29 @@
+@import '~/styles';
+
+.RouteRoot {
+  display: flex;
+  flex-direction: column;
+}
+
+.RouteTitle {
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: #{$width-xs}) {
+    padding-bottom: 1rem;
+  }
+}
+
+.RouteWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: start;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.InfoButtonIcon {
+  width: 32px;
+  height: 32px;
+}
