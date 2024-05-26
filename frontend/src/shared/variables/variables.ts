@@ -183,9 +183,9 @@ export const unit = {
 }
 
 export const formData = {
-  inputData: { label: 'Data', name: 'data' },
+  inputData: { label: 'Lock Until', name: 'data' },
   inputFreeInbound: { label: 'Free Inbound', name: 'inbound' },
   inputFreeOutbound: { label: 'Free Outbound', name: 'outbound' },
-  inputLiquidity: { label: 'Initial liquidity', name: 'liquidity' },
+  inputLiquidity: { label: 'Initial Liquidity', name: 'liquidity' },
   inputSource: { label: 'Source', name: 'lource' },
 }
